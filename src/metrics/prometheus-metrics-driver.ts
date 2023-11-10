@@ -80,7 +80,7 @@ export class PrometheusMetricsDriver implements MetricsInterface {
     /**
      * Handle a new connection.
      */
-    markNewConnection(ws: WebSocket): void {
+    markNewConnection(ws: WebSocket<any>): void {
         this.metrics.connectedSockets.inc(this.getTags(ws.app.id));
         this.metrics.newConnectionsTotal.inc(this.getTags(ws.app.id));
     }
@@ -88,7 +88,7 @@ export class PrometheusMetricsDriver implements MetricsInterface {
     /**
      * Handle a disconnection.
      */
-    markDisconnection(ws: WebSocket): void {
+    markDisconnection(ws: WebSocket<any>): void {
         this.metrics.connectedSockets.dec(this.getTags(ws.app.id));
         this.metrics.newDisconnectionsTotal.inc(this.getTags(ws.app.id));
     }
@@ -167,7 +167,7 @@ export class PrometheusMetricsDriver implements MetricsInterface {
     /**
      * Get the stored metrics as JSON.
      */
-    getMetricsAsJson(): Promise<prom.metric[]|void> {
+    getMetricsAsJson(): Promise<prom.Metric[]|void> {
         return this.register.getMetricsAsJSON();
     }
 

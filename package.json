@@ -1,10 +1,10 @@
 {
-  "name": "@soketi/soketi",
-  "version": "0.0.0-dev",
+  "name": "@etfly/soketi",
+  "version": "0.0.1-dev",
   "description": "Just another simple, fast, and resilient open-source WebSockets server.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/soketi/soketi.git"
+    "url": "https://github.com/martinEtflais/soketi.git"
   },
   "main": "dist/index.js",
   "keywords": [
@@ -16,7 +16,7 @@
     "socket",
     "pusher"
   ],
-  "author": "Alex Renoki",
+  "author": "Martin Etflaiš",
   "license": "AGPL-3.0",
   "jshintConfig": {
     "esversion": 9
@@ -46,7 +46,7 @@
     "rate-limiter-flexible": "^2.3.8",
     "sqs-consumer": "^5.7.0",
     "uuid": "^8.3.2",
-    "uWebSockets.js": "https://github.com/uNetworking/uWebSockets.js.git#v20.10.0",
+    "uWebSockets.js": "https://github.com/uNetworking/uWebSockets.js.git#v20.34.0",
     "yargs": "^17.5.1"
   },
   "devDependencies": {
